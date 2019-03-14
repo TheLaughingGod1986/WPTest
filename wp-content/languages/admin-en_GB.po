@@ -6468,7 +6468,7 @@ msgstr "If you want to run multiple WordPress installations in a single database
 msgid "The file %1$s already exists. If you need to reset any of the configuration items in this file, please delete it first. You may try <a href=\"%2$s\">installing now</a>."
 msgstr "The file %1$s already exists. If you need to reset any of the configuration items in this file, please delete it first. You may try <a href=\"%2$s\">installing now</a>."
 
-#. translators: %s: wp-config.php
+#. translators: %s: wp-config-sample.php
 #: wp-admin/setup-config.php:52
 msgid "Sorry, I need a %s file to work from. Please re-upload this file to your WordPress installation."
 msgstr "Sorry, I need a %s file to work from. Please re-upload this file to your WordPress installation."
