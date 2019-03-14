@@ -5,16 +5,15 @@
 get_header();
 ?>
 
-
     <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-5 offset-md-4">
             <h5>Place the films in your preferd order by draging or clicking the up and down arrow. Once you
                 have made your selection enter tour name and email and email the click "submit"</h5>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-1 offset-md-5">
+        <div class="col-md-1 offset-md-4">
             <ol>
                 <li>1</li>
                 <li>2</li>
@@ -25,7 +24,7 @@ get_header();
                 <li>7</li>
             </ol>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
             <ul id="new_fields">
                 <li id="field_id_1" name='fruits[]' class="ui-state-default">The Abyss</li>
                 <li id="field_id_2" name='fruits[]' class="ui-state-default">Aliens</li>
@@ -37,8 +36,18 @@ get_header();
                 <li id="field_id_7" class="ui-state-default">Piranha II: The Spawning</li>
             </ul>
         </div>
+        <div class="col-md-1">
+            <ol>
+                <li>down</li>
+                <li>up down</li>
+                <li>up down</li>
+                <li>up down</li>
+                <li>up down</li>
+                <li>up down</li>
+                <li>up</li>
+            </ol>
+        </div>
     </div>
-
 
     <div class="row">
         <div class="col-md-5 offset-md-4">
@@ -50,18 +59,15 @@ get_header();
         </div>
     </div>
 
-
-            <?php
-            while (have_posts()) :
-                the_post();
-                get_template_part('template-parts/page/content', 'page');
-                if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif;
-            endwhile;
-            ?>
-
-
+<?php
+while (have_posts()) :
+    the_post();
+    get_template_part('template-parts/page/content', 'page');
+    if (comments_open() || get_comments_number()) :
+        comments_template();
+    endif;
+endwhile;
+?>
 
     <!--            For list see front end cms page-->
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
