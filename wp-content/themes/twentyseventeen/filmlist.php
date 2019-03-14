@@ -38,13 +38,11 @@ get_header();
         </div>
         <div class="col-md-1">
             <ol>
-                <li>down</li>
-                <li>up down</li>
-                <li>up down</li>
-                <li>up down</li>
-                <li>up down</li>
-                <li>up down</li>
-                <li>up</li>
+                <li><span style='font-size:30px;' class="float-left"></span></li>
+                <li><span style='font-size:30px;' class="float-left"></span> <span style='font-size:30px;' class="float-right"></span></li>
+                <li><span style='font-size:30px;' class="float-left"></span> <span style='font-size:30px; class="float-right"'></span></li>
+                <li><span style='font-size:30px;' class="float-left"></span> <span style='font-size:30px; class="float-right"'></span></li>
+                <li><span style='font-size:30px;' class="float-left"></span></li>
             </ol>
         </div>
     </div>
