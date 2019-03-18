@@ -24,32 +24,22 @@ get_header();
                 <li>7</li>
             </ol>
         </div>
-        <div class="col-md-3">
-            <ul id="new_fields">
-                <li id="field_id_1" name='fruits[]' class="ui-state-default">The Abyss</li>
-                <li id="field_id_2" name='fruits[]' class="ui-state-default">Aliens</li>
-                <li id="field_id_3" name='fruits[]' class="ui-state-default">The Terminator</li>
-                <li id="field_id_4" name='fruits[]' class="ui-state-default">Terminator 2: Judgement Day
-                </li>
+        <div class="col-md-4">
+            <ul id="new_fields" class="updownrow">
+                <li id="field_id_1" name='fruits[]' class="ui-state-default">The Abyss <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
+                <li id="field_id_2" name='fruits[]' class="ui-state-default">Aliens <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
+                <li id="field_id_3" name='fruits[]' class="ui-state-default">The Terminator <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
+                <li id="field_id_4" name='fruits[]' class="ui-state-default">Terminator 2: Judgement Day <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
                 <li id="field_id_5" class="ui-state-default">Avatar</li>
                 <li id="field_id_6" class="ui-state-default">Titanic</li>
                 <li id="field_id_7" class="ui-state-default">Piranha II: The Spawning</li>
             </ul>
         </div>
-        <div class="col-md-1">
-            <ol>
-                <li><span style='font-size:30px;' class="float-left"></span></li>
-                <li><span style='font-size:30px;' class="float-left"></span> <span style='font-size:30px;' class="float-right"></span></li>
-                <li><span style='font-size:30px;' class="float-left"></span> <span style='font-size:30px; class="float-right"'></span></li>
-                <li><span style='font-size:30px;' class="float-left"></span> <span style='font-size:30px; class="float-right"'></span></li>
-                <li><span style='font-size:30px;' class="float-left"></span></li>
-            </ol>
-        </div>
     </div>
 
     <div class="row">
         <div class="col-md-5 offset-md-4">
-            <form onclick="sendFilms" method="get">
+            <form onclick="sendFilms()" method="get">
                 Name: <input type="text" id="name" name="name"><br>
                 E-mail: <input type="text" id="email" name="email"><br>
                 <input type="submit">

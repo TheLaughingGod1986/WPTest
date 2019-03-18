@@ -5,18 +5,14 @@
 li {
     list-style-type: none;
 }
-/*.set-cen {*/
-/*    text-align: center;*/
-/*}*/
-/*.set-cen ul {*/
-/*    list-style-type: none;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    !* For IE, the outcast *!*/
-/*    zoom:1;*/
-/*}*/
-/*.set-cen li {*/
+.updownrow li span {
+    float: right;
+}
 
-/*    padding: 2px 5px;*/
+.updownrow {
+    padding: 15px;
+}
 
-/*}*/
+.updownbtn {
+    font-size: 25px;
+}
