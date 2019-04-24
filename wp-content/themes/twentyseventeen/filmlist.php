@@ -5,14 +5,14 @@
 get_header();
 ?>
     <div class="row">
-        <div class="col-md-7 offset-md-3">
+        <div class="col-7 offset-3">
             <h5>Place the films in your preferred order by dragging or clicking the up and down arrow. Once you
                 have made your selection enter tour name and email and email the click "submit"</h5>
         </div>
     </div>
 
     <div class="row ">
-        <div class="col-md-4 text-right">
+        <div class="col-4 text-right">
             <ol style="float: right;">
                 <li class="numberCircleFirst">1</li>
                 <li class="numberCircle">2</li>
@@ -24,7 +24,7 @@ get_header();
 
             </ol>
         </div>
-        <div class="col-md-5">
+        <div class="col-5">
             <ul id="new_fields" class="updownrow">
                 <li id="field_id_1" class="ui-state-default border-round border border-secondary">The Abyss
                     <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
@@ -57,10 +57,10 @@ get_header();
 
         <form onclick="sendFilms()" method="get">
             <div class="row">
-                <div class="col-md-3 offset-md-3">
+                <div class="col-3 offset-md-3">
                     <input type="text" id="name" name="name" class="form-control" placeholder="Name[required]">
                 </div>
-                <div class="col-md-3 ">
+                <div class="col-3 ">
                     <input type="text" id="email" name="email" class="form-control" placeholder="Email address[required]">
                 </div>
 
