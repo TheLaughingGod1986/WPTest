@@ -17,6 +17,13 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", false, null);
+    wp_enqueue_script('jquery');
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -450,6 +457,7 @@ function twentyseventeen_scripts() {
     // all scripts
     wp_enqueue_script( 'filmjquery', get_template_directory_uri() . '/assets/js/filmjquery.js', array( 'jquery' ), '3.3.6', true );
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20120206', true );
+
     wp_enqueue_script( 'jquery-ui-core' );
     wp_enqueue_script( 'jquery-ui-widget' );
     wp_enqueue_script( 'jquery-ui-mouse' );
@@ -550,6 +558,7 @@ add_action( 'enqueue_block_editor_assets', 'twentyseventeen_block_editor_styles'
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
+
 function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 

@@ -1,6 +1,6 @@
 jQuery(document).ready
 (
-    function sortable () {
+    function sortable() {
         jQuery("#new_fields").sortable({
             cursor: 'move',
             // post
@@ -13,7 +13,7 @@ jQuery(document).ready
                 });
             }
         });
-        jQuery("#new_fields").disableSelection();
+        // jQuery("#new_fields").disableSelection();
 
 
         lists = document.getElementsByClassName('ui-state-default');
@@ -30,28 +30,6 @@ jQuery(document).ready
                 ul.appendChild(ul.children[Math.random() * i | 0]);
             }
         }
-    },
-
-    function moveupordown () {
-        $('.glyphicon-arrow-up').on('click', function(e){
-            e.preventDefault();
-            var _this = $(this);
-            var _parent = _this.closest('ul');
-            var _child = $(_parent).find('li');
-            var selected= $(this).closest('li').index();
-            jQuery($(_parent).children().eq(selected-1)).before(jQuery($(_parent).children().eq(selected)));
-
-        });
-
-        $('.glyphicon-arrow-down').on('click', function(e){
-            e.preventDefault();
-            var _this = $(this);
-            var _parent = _this.closest('ul');
-            var _child = $(_parent).find('li');
-            var selected= $(this).closest('li').index();
-            jQuery($(_parent).children().eq(selected+1)).after(jQuery($(_parent).children().eq(selected)));
-            selected=selected+1;
-        });
     },
 
     function sendFilms() {
@@ -72,5 +50,28 @@ jQuery(document).ready
         };
         http.send(params);
     },
+);
 
+$(
+    function moveupanddown(){
+    $('.glyphicon-arrow-up').on('click', function(e){
+        e.preventDefault();
+        var _this = $(this);
+        var _parent = _this.closest('ul');
+        var _child = $(_parent).find('li');
+        var selected= $(this).closest('li').index();
+        jQuery($(_parent).children().eq(selected-1)).before(jQuery($(_parent).children().eq(selected)));
+    });
+
+    $('.glyphicon-arrow-down').on('click', function(e){
+        e.preventDefault();
+        var _this = $(this);
+        var _parent = _this.closest('ul');
+        var _child = $(_parent).find('li');
+        var selected= $(this).closest('li').index();
+        jQuery($(_parent).children().eq(selected+1)).after(jQuery($(_parent).children().eq(selected)));
+        selected=selected+1;
+    });
+
+}
 );

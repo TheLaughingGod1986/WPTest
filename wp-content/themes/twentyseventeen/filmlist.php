@@ -4,7 +4,6 @@
  */
 get_header();
 ?>
-
     <div class="row">
         <div class="col-md-7 offset-md-3">
             <h5>Place the films in your preferred order by dragging or clicking the up and down arrow. Once you
@@ -12,7 +11,7 @@ get_header();
         </div>
     </div>
 
-    <div class="row text">
+    <div class="row ">
         <div class="col-md-4 text-right">
             <ol style="float: right;">
                 <li class="numberCircleFirst">1</li>
@@ -43,7 +42,7 @@ get_header();
                 <li id="field_id_5" class="ui-state-default border-round border border-secondary">Avatar
                     <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
                 </li>
-                <li id="field_id_6" class="ui-state-default border-round border border-secondary">Titanic #
+                <li id="field_id_6" class="ui-state-default border-round border border-secondary">Titanic
                     <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
                 </li>
                 <li id="field_id_7" class="ui-state-default border-round border border-secondary">Piranha II: The
@@ -55,19 +54,22 @@ get_header();
     </div>
 
 
-    <div class="">
+
         <form onclick="sendFilms()" method="get">
             <div class="row">
                 <div class="col-md-3 offset-md-3">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="First name">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Name[required]">
                 </div>
                 <div class="col-md-3 ">
-                    <input type="text" id="email" name="email" class="form-control" placeholder="Last name">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Email address[required]">
                 </div>
+
+                <input class="float-right quick-override" type="submit">
             </div>
-            <input class="col-md-3 offset-md-3" type="submit">
         </form>
-    </div>
+
+
+
 
 
 <?php

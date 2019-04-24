@@ -29,7 +29,18 @@ li:first-of-type {
     margin-bottom: 10px;
 }
 
+li:first-of-type .glyphicon-arrow-up {
+        display: none;
+    }
 
+li:last-of-type .glyphicon-arrow-down {
+    display: none;
+}
+
+.row h5 {
+    margin: 0 62px 20px 0px;
+    font-size: 10px;
+}
 
 .numberCircle {
     border-radius: 50%;
@@ -60,7 +71,9 @@ color: white;
      margin-bottom: 10px;
 }
 
-
+.quick-override {
+    margin: 50px 0 0 -119px;
+}
 
 
 
