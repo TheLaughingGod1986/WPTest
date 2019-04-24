@@ -24,6 +24,11 @@ function my_jquery_enqueue() {
     wp_enqueue_script('jquery');
 }
 
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+    wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
