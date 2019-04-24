@@ -6,46 +6,69 @@ get_header();
 ?>
 
     <div class="row">
-        <div class="col-md-5 offset-md-4">
-            <h5>Place the films in your preferd order by draging or clicking the up and down arrow. Once you
+        <div class="col-md-7 offset-md-3">
+            <h5>Place the films in your preferred order by dragging or clicking the up and down arrow. Once you
                 have made your selection enter tour name and email and email the click "submit"</h5>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-1 offset-md-4">
-            <ol>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
+    <div class="row text">
+        <div class="col-md-4 text-right">
+            <ol style="float: right;">
+                <li class="numberCircleFirst">1</li>
+                <li class="numberCircle">2</li>
+                <li class="numberCircle">3</li>
+                <li class="numberCircle">4</li>
+                <li class="numberCircle">5</li>
+                <li class="numberCircle">6</li>
+                <li class="numberCircle">7</li>
+
             </ol>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <ul id="new_fields" class="updownrow">
-                <li id="field_id_1" name='fruits[]' class="ui-state-default">The Abyss <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
-                <li id="field_id_2" name='fruits[]' class="ui-state-default">Aliens <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
-                <li id="field_id_3" name='fruits[]' class="ui-state-default">The Terminator <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
-                <li id="field_id_4" name='fruits[]' class="ui-state-default">Terminator 2: Judgement Day <span class="updownbtn movetop fa fa-angle-double-up"></span></li>
-                <li id="field_id_5" class="ui-state-default">Avatar</li>
-                <li id="field_id_6" class="ui-state-default">Titanic</li>
-                <li id="field_id_7" class="ui-state-default">Piranha II: The Spawning</li>
+                <li id="field_id_1" class="ui-state-default border-round border border-secondary">The Abyss
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
+                <li id="field_id_2" class="ui-state-default border-round border border-secondary">Aliens
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
+                <li id="field_id_3" class="ui-state-default border-round border border-secondary">The Terminator
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
+                <li id="field_id_4" class="ui-state-default border-round border border-secondary">Terminator 2:
+                    Judgement Day
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
+                <li id="field_id_5" class="ui-state-default border-round border border-secondary">Avatar
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
+                <li id="field_id_6" class="ui-state-default border-round border border-secondary">Titanic #
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
+                <li id="field_id_7" class="ui-state-default border-round border border-secondary">Piranha II: The
+                    Spawning
+                    <span class="glyphicon-arrow-up">Up</span><span class="glyphicon-arrow-down">Down</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-5 offset-md-4">
-            <form onclick="sendFilms()" method="get">
-                Name: <input type="text" id="name" name="name"><br>
-                E-mail: <input type="text" id="email" name="email"><br>
-                <input type="submit">
-            </form>
-        </div>
+
+    <div class="">
+        <form onclick="sendFilms()" method="get">
+            <div class="row">
+                <div class="col-md-3 offset-md-3">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-md-3 ">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <input class="col-md-3 offset-md-3" type="submit">
+        </form>
     </div>
+
 
 <?php
 while (have_posts()) :

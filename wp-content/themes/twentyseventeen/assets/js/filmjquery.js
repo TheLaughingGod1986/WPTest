@@ -1,8 +1,6 @@
 jQuery(document).ready
-
-// Please see console log for dynamic list of re orderd films
 (
-    function () {
+    function sortable () {
         jQuery("#new_fields").sortable({
             cursor: 'move',
             // post
@@ -17,10 +15,6 @@ jQuery(document).ready
         });
         jQuery("#new_fields").disableSelection();
 
-        var ul = document.querySelector('ul');
-        for (var i = ul.children.length; i >= 0; i--) {
-            ul.appendChild(ul.children[Math.random() * i]);
-        }
 
         lists = document.getElementsByClassName('ui-state-default');
         x = [];
@@ -28,27 +22,35 @@ jQuery(document).ready
             x[i] = lists[i].id;
             console.log(x);
         }
+
+        var uls = document.querySelectorAll('ul');
+        for (var j = 0; j < uls.length; j++) {
+            var ul = uls.item(j);
+            for (var i = ul.children.length; i >= 0; i--) {
+                ul.appendChild(ul.children[Math.random() * i | 0]);
+            }
+        }
     },
 
-    function () {
-        $(".moveup").on("click", function () {
-            var elem = $(this).closest("li");
-            elem.prev().before(elem);
+    function moveupordown () {
+        $('.glyphicon-arrow-up').on('click', function(e){
+            e.preventDefault();
+            var _this = $(this);
+            var _parent = _this.closest('ul');
+            var _child = $(_parent).find('li');
+            var selected= $(this).closest('li').index();
+            jQuery($(_parent).children().eq(selected-1)).before(jQuery($(_parent).children().eq(selected)));
+
         });
 
-        $(".movedown").on("click", function () {
-            var elem = $(this).closest("li");
-            elem.next().after(elem);
-        });
-
-        $(".movetop").on("click", function () {
-            var elem = $(this).closest("li");
-            elem.siblings().first().before(elem);
-        });
-
-        $(".movebottom").on("click", function () {
-            var elem = $(this).closest("li");
-            elem.siblings().last().after(elem);
+        $('.glyphicon-arrow-down').on('click', function(e){
+            e.preventDefault();
+            var _this = $(this);
+            var _parent = _this.closest('ul');
+            var _child = $(_parent).find('li');
+            var selected= $(this).closest('li').index();
+            jQuery($(_parent).children().eq(selected+1)).after(jQuery($(_parent).children().eq(selected)));
+            selected=selected+1;
         });
     },
 
@@ -69,11 +71,6 @@ jQuery(document).ready
             }
         };
         http.send(params);
-    }
+    },
+
 );
-
-
-// $( function() {
-//     $( "#sortable" ).sortable();
-//     $( "#sortable" ).disableSelection();
-// } );
